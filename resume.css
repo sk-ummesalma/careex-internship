@@ -1,0 +1,40 @@
+/* Write CSS Here */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: rgb(242, 245, 249);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.full {
+	width: 50%;
+	max-width: 1000px;
+	min-height: 100px;
+	background-color: rgb(228, 226, 222);
+	margin: 0px;
+	display: grid;
+	grid-template-columns: 2fr 4fr;
+}
+.left {
+	position: initial;
+	background-color: rgb(201, 196, 201);
+	padding: 20px;
+
+}
+.right {
+	position: initial;
+	background-color: rgb(223, 213, 228);
+	padding: 20px;
+
+}
+.image, .Contact, .Skills, .Language,  .title,
+  .Education, .project ,.links{
+	margin-bottom: 30px;
+}
+.h2 {
+	background-color: #eff3f6;
+}
