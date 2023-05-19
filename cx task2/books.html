@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bookstore</title>
+  <style>
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  border-color:#333;
+  color: rgb(160, 123, 123);
+  text-align: center;
+  padding: 5px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #f4ecec;
+}
+
+    body {
+      background-color:rgb(231, 219, 228);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+    }
+
+    main {
+      margin: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .product {
+      background-color: #e1d9d9;
+      width: 300px;
+      margin: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .product img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+    }
+
+    .product-details {
+      padding: 20px;
+    }
+
+    .product-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .product-author {
+      margin-top: 5px;
+      font-size: 14px;
+      color: #888;
+    }
+
+    .product-price {
+      font-size: 16px;
+      color: #888;
+      margin-top: 10px;
+    }
+
+    .product-description {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .product-button {
+      margin-top: 10px;
+      background-color: #333;
+      color: #dfd9d9;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .product-button:hover {
+      background-color: #555;
+    }
+
+    footer {
+      background-color: #333;
+      color: #e0dada;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  
+  
+  <header>
+    <center>
+    <h1>Popular Holdings Limited</h1>
+   
+    </center>
+    <ul>
+      <li><a class="active" href="ACCOUNT">ACCOUNT</a></li>
+      <li><a href="#ORDERS">ORDERS</a></li>
+      <li><a href="CART">CART</a></li>
+      <li><a href="#HOME">HOME</a></li>
+    </ul>
+
+  </header>
+  <main>
+    <div class="product">
+      <img src="C:\careex internship\cx task2\Great Gatsby.jpg" alt="Book 1">
+      <div class="product-details">
+        <h2 class="product-title">The Great Gatsby</h2>
+        <p class="product-author">By F. Scott Fitzgerald</p>
+        <p class="product-price">Rs.140</p>
+        <p class="product-description">The Great Gatsby is a novel written by American author F. Scott Fitzgerald. It follows a cast of characters living in the fictional town of West Egg on prosperous Long Island in the summer of 1922.</p>
+        <button class="product-button" onclick="addToCart('The Great Gatsby')">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="product">
+        <img src="C:\careex internship\cx task2\to kill a mocking bird.jpg" alt="Book 2">
+        <div class="product-details">
+          <h2 class="product-title">To Kill a Mockingbird</h2>
+          <p class="product-author">By Harper Lee</p>
+          <p class="product-price">Rs.200</p>
+          <p class="product-description">To Kill a Mockingbird is a novel by Harper Lee. It explores themes of racial injustice and the destruction of innocence in the 1930s Deep South through the eyes of young Jean Louise "Scout" Finch.</p>
+          <button class="product-button" onclick="addToCart('To Kill a Mockingbird')">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="C:\careex internship\cx task2\touch of eternity.jpg" alt="Book 3">
+        <div class="product-details">
+          <h2 class="product-title">A Touch Of Eternity</h2>
+          <p class="product-author">Durjoy Datt</p>
+          <p class="product-price">Rs.350</p>
+          <p class="product-description">“A Touch of Eternity” by Durjoy Datta is an extraordinary story of a couple Anvesha and Druvan, who were to be perfect soulmates for each other since the time they were born. </p>
+          <button class="product-button" onclick="addToCart('A Touch Of Eternity')">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="C:\careex internship\cx task2\sherlock.jpg" alt="Book 4">
+        <div class="product-details">
+          <h2 class="product-title">Sherlock Holmes</h2>
+          <p class="product-author">Arthur Conan Doyle</p>
+          <p class="product-price">Rs.450</p>
+          <p class="product-description">Sherlock Holmes, fictional character created by the Scottish writer Arthur Conan Doyle. The prototype for the modern mastermind detective, Holmes first appeared in Conan Doyle’s A Study in Scarlet, published in Beeton’s Christmas Annual of 1887.</p>
+          <button class="product-button" onclick="addToCart('Sherlock Holme')">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="C:\careex internship\cx task2\something i never told you.jpg" alt="Book 5">
+        <div class="product-details">
+          <h2 class="product-title">Something i never told you</h2>
+          <p class="product-author">Shravya Bhinder</p>
+          <p class="product-price">Rs.200</p>
+          <p class="product-description">Falling in love is one thing, and loving the same person for a lifetime in spite of their flaws and nature is another. Raunak and Adira's story tells about a very strong aspect of love and relationships..</p>
+          <button class="product-button" onclick="addToCart('Something i never told you')">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="C:\careex internship\cx task2\you only live once.jpg" alt="Book 6">
+        <div class="product-details">
+          <h2 class="product-title">You only live once</h2>
+          <p class="product-author">Stuti Changle</p>
+          <p class="product-price">Rs.250</p>
+          <p class="product-description">Join a broken but rising YouTube star Alara, a struggling but hopeful stand-up comedian Aarav, and a zany but zen beach shack owner Ricky. Together, take the journey to seek the truth behind the famous singer Elisha's disappearance somewhere by the deep sea in Goa.</p>
+          <button class="product-button" onclick="addToCart('You only live once')">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="C:\careex internship\cx task2\fluffy and me.jpg" alt="Book 7">
+        <div class="product-details">
+          <h2 class="product-title">Fluffy and Me</h2>
+          <p class="product-author">Anitha krishan</p>
+          <p class="product-price">Rs.390</p>
+          <p class="product-description">A heart warming tale of the selfless love and boundless devotion that only canines are capable of showering, Anita Krishan’s Fluffy and Me will take you on an emotional journey full of laughter and tears, fun and fear.”.</p>
+          <button class="product-button" onclick="addToCart('Fluffy and Me')">Add to Cart</button>
+        </div>
+      </div>
+    <!-- Add more product items here -->
+  </main>
+  <footer>
+    <p>&copy; 2023 Bookstore. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function addToCart(productName) {
+      alert('Added ' + productName + ' to cart!');
+    }
+  </script>
+</body>
+</html>
